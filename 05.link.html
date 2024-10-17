@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zw-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            /* 繼承瀏覽器的高度 */
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* a:link 後面的:link可省略 */
+        /* :冒號 偽類 pseudo-class，是一個大家族 */
+        /* :link 是一個狀態，有連結 herf 的狀態 */
+        a {
+            color: red;
+            font-size: 100px;
+            /* 拿掉超連結原本自帶的底線 */
+            text-decoration: none;
+            /* 轉場動畫 */
+            transition: 1.5s;
+
+        }
+
+        a:visited {
+            /* :visited 拜訪過後的狀態 */
+            color: gray;
+        }
+
+        /* :hover 滑鼠移過去的狀態 */
+        a:hover {
+
+            color: white;
+            background: rgb(136, 161, 136);
+            text-decoration: underline;
+            /* 變形 */
+            /* 若要呈現效果 上方 a 必須設定transition: 1.5s 秒數 */
+            transform: rotate(360deg);
+
+        }
+
+        a:active {
+            /* :active 滑鼠點下去時的狀態 */
+            color: yellowgreen;
+
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Google</a>
+</body>
+
+</html>

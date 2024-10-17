@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google字型</title>
+    <!-- google 字型 -->
+    <!-- 第一個是 .google-font的連結 -->
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+    <!-- 第二個是 body的連結 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            font-size: 16px;
+
+        }
+
+        /* 沒有.開頭body 代表標籤選擇器 */
+        body {
+            /* 對整份文件做字型的設定，下面兩個class的font-family註解掉就會全篇應用 */
+            font-family: "Sixtyfour Convergence", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0,
+                "XELA" 0,
+                "YELA" 0;
+
+        }
+
+        /* 對局部文字做設定 */
+        .font-style {
+            font-size: 30px;
+            /* 單位可以是 px、rem、em.... */
+            font-style: italic;
+            /* 設定斜體 */
+            font-weight: bold;
+            /* 設定粗體 100~900、(bold & bolder都是粗體)*/
+            font-family: '微軟正黑體',
+                Verdana,
+                Geneva,
+                Tahoma,
+                sans-serif;
+            /* 字型家族 */
+            /* 如果使用者的系統有第一個字型就使用 微軟正黑體，沒有就用第二個 Verdana...*/
+        }
+
+        /* 2.設定google 字型的 font-family */
+        .google-font {
+            font-family: "Londrina Solid", serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+
+        .text-style {
+            font-size: 30px;
+            text-align: left;
+            /* 文字對齊 left、right、center */
+            text-decoration: underline;
+            /* underline、line-through、overline */
+            text-indent: 100px;
+            /* 第一行文字的縮排 */
+            letter-spacing: 10px;
+            /* 英文字母或中文字的間隔 */
+            word-spacing: 20px;
+            /* 單字之間的間隔，中文字比較難用到這個屬性(字跟字之間沒有空格) */
+            line-height: 50px;
+            /* 行高，可以設定單位值*/
+            line-height: 2;
+            /* 也可以設定倍數(無單位) */
+
+        }
+
+        .text-shadow {
+            font-size: 100px;
+            /* 第一個數字 水平位移:往右為正，往左為負 */
+            /* 第二個數字 垂直位移:往上為正，往下為負 */
+            /* 第三個數字 模糊半徑:只能為正 */
+            /* 0 0 0 三個數值為0等於重疊在一起 */
+            /* rgba後的數字為顏色及透明度 */
+            /* text-shadow:-57px -71px 15px rgba(234, 110, 180, 0.5), */
+
+            text-shadow:
+                /* 雙重陰影 */
+                -57px -71px 15px rgba(234, 110, 180, 0.5),
+                -100px 100px 15px rgba(234, 110, 180, 0.5);
+        }
+
+        /* CSS generator 產生器，可以先在產生器知道外觀長什麼樣子，喜歡再複製貼上 */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 
+    10進位 0~9 遇到10就進位
+    32 2*1(個位數) + 10*3(十位數) =32
+
+
+    16進位 0~9 A(10)~F(15) 遇到16就進位
+    A(10)、B(11)、C(12)、D(13)、E(14)、F(15)
+    1A => 10*1(個位數) + 16 * 1 = 26
+
+    FF => 255 => 15*1 + 15*16= 255
+    第一個位數是0次方、第二個位數是1次方
+
+    -->
+
+    <h1>1.Font 樣式設定</h1>
+
+
+    <!-- emmet 打法 .font-style -->
+    <div class="font-style">
+        星期四
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam libero veniam numquam ipsa eveniet mollitia
+        tempora ut vero atque blanditiis.
+    </div>
+
+    <h2>2.Google Font</h2>
+    <!-- emmet 打法 .google-font -->
+    <div class="google-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error odit consequatur minima
+        animi! Incidunt asperiores, reprehenderit quae nobis voluptatibus deleniti!</div>
+
+    <h2>3.Text 樣式設定</h2>
+    <p class="text-style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deserunt harum itaque tenetur
+        natus facilis accusantium dicta eaque distinctio similique.</p>
+
+    <h2>4.文字陰影</h2>
+    <p class="text-shadow">PHP is the best!</p>
+
+    <h2>5.rem 與 em 差異</h2>
+    <h3>rem</h3>
+    <p>為root 預設 font-size 的倍數，預設為 16px</p>
+    <p>root 選擇器，指的是根元素 html</p>
+    <div style="font-size: 1rem;">
+        font
+        <div style="font-size: 2rem;">
+            font
+            <div style="font-size: 3rem;">font</div>
+        </div>
+    </div>
+
+    <h3>em</h3>
+    <p>可能為父層或祖先層 font-size 倍數。</p>
+    <p>父層若有設定文字尺寸以它為準，沒有會繼續往外找。</p>
+    <div style="font-size: 1em;">
+        font
+        <div style="font-size: 2em;">
+            font
+            <div style="font-size: 3em;">font</div>
+        </div>
+    </div>
+</body>
+
+</html>

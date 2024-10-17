@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顏色設定</title>
+</head>
+
+<body>
+    <h1>使用顏色名稱</h1>
+    <p style="color: mediumslateblue;"></p>
+    <h1>使用HEX 16 進位表示</h1>
+    <p style="color: #ff0;background-color: #000;">Lorem ipsum dolor sit amet.</p>
+    <!-- 六碼 兩兩一組 前兩位紅 中兩位綠 後兩位藍 (RGB)-->
+    <!-- 都沒有顏色的世界#000000=黑色 -->
+    <!-- 當三組,兩兩一組都相同時,可以省略其中一個,上下兩行都一樣 -->
+    <p style="color: #ffff00;background-color: #000000;">Lorem ipsum dolor sit amet.</p>
+
+    <h1>使用rgb()或rgba()</h1>
+    <!-- 全黑 rgb（0,0,0） 到全白 rgb（255,255,255） -->
+    <!-- 0~255 十進位的數字 -->
+    <p style="color: rgb(255, 0, 0);">Lorem ipsum dolor sit amet.</p>
+    <!-- 0.5是透明度alpha, 0、0.1....0.9、1 -->
+    <p style="color: rgba(255, 0, 0, 0.5);">Lorem ipsum dolor sit amet.</p>
+    <hr>
+
+    <!-- emmet -->
+    <!-- https://docs.emmet.io/cheat-sheet/ -->
+    <!-- p*6 快速打 -->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+</body>
+
+</html>
