@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size</title>
+    <style>
+        #vw {
+            /* vw =  視窗的寬度，100vw=全滿(50vw=視窗一半) */
+            /* # = id */
+            /* . = class */
+            width: 50vw;
+            height: 100px;
+            background: gray;
+        }
+
+        #vh {
+            /* vh =  視窗的高度，100vh=全滿(50vh=視窗一半) */
+            width: 50px;
+            height: 50vh;
+            background: pink;
+        }
+
+        #vmin {
+            /* vmin = 視窗當時寬或高較小的那一個*/
+            /* 100vmin = 視窗當下比較長的那一邊才會全滿 */
+            width: 50vmin;
+            height: 100vmax;
+            background: skyblue;
+        }
+
+        #vmax {
+            /* vmax = 視窗當時寬或高較大的那一個*/
+            /* 100vmax = 視窗當下比較長的那一邊才會全滿 */
+            width: 50vmax;
+            height: 100vmax;
+            background: skyblue;
+        }
+
+        #out {
+            width: 300px;
+            height: 300px;
+            background: orange;
+
+        }
+
+        #in {
+            /* % = 外層元素(沒有外層元素就按照body預設值)大小的百分比 */
+            /* 外層必須要設定高度，內層的 % 才有效 */
+            width: 70%;
+            /* width: calc(50% + 30px); */
+            /* calc 可計算不同單位(%、rem、em、px)，四則運算符號前後都必須要加空白 */
+            height: 50%;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <p>aaa</p>
+    <span>AAA</span>
+
+    <div id="vw">vw</div>
+    <!-- <div id="vh">vh</div> -->
+    <div id="vmin">vmin</div>
+    <!-- <div id="vmax">vmax</div> -->
+
+    <!-- <div id="out">
+        <div id="in"></div>
+    </div> -->
+
+    <div id="in">0</div>
+
+</body>
+
+</html>
