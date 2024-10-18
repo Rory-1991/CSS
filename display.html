@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dispaly</title>
+    <style>
+        img {
+            text-align: center;
+            /* text-align 區塊、表格內的內容對齊 */
+            vertical-align: bottom;
+            /* vertical-align 行內、表格的內容垂直對齊 
+            top: 整行頂部(表格能用)
+            middle: 整行中間(表格能用)
+            buttom: 整行底部(表格能用)
+            text-top: 文字字體頂部
+            text-bottom: 文字字體底部
+            super: 上標
+            sub: 下標
+            */
+
+        }
+
+        span {
+            text-decoration: overline underline;
+
+        }
+
+        p {
+
+            line-height: 3em;
+            font-size: 88px;
+        }
+
+        .inline-block {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            display: inline-block;
+            /* display 修改元素的顯示方式
+            none: 不顯示
+            inline-block: 外在排列和 inline(行內) 相同，內部排列與 block(區塊) 相同 
+            */
+            text-align: center;
+
+        }
+
+        .inline-block:not(:first-child) {
+            margin: -4px;
+        }
+
+        a {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="#">X</a> -->
+    <span>AAaa</span>
+    <img src="https://picsum.photos/50/50/?random=10">
+
+    <p>
+        <!-- <div style="font-size: 100px; height: 100px; line-height: 100px; text-align: center;border: 1px solid black;">AAA
+    </div> -->
+    <div style="font-size: 100px; height: 100px; line-height: 100px; text-align: center;border: 1px solid black;">AAA
+    </div>
+    <!-- 若區塊高度與行高一樣=>文字垂直置中 -->
+    <!-- 行內的東西無法設定寬高 -->
+    </p>
+    <div>
+        <div class="inline-block">inline-block</div>
+        <div class="inline-block">inline-block</div>
+        <div class="inline-block">inline-block</div>
+    </div>
+    <!-- 快速生成id打法 #名稱 
+     #test <div id="test"></div> -->
+
+    <a href="#">123</a>
+
+</body>
+
+</html>
